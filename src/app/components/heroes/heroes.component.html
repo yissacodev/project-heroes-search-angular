@@ -1,0 +1,9 @@
+<h1 class="animated fadeIn fast">Heroes de <small>Marvel y DC</small></h1>
+
+<hr>
+
+<div class="card-columns">
+
+    <app-hero-tarjeta (hereoSeleccionado)="verHeroe( $event )" *ngFor=" let heroe of heroes; let i = index;" [heroe]="heroe" [index]="i"></app-hero-tarjeta>
+
+</div>

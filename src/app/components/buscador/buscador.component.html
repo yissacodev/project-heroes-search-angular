@@ -1,0 +1,22 @@
+<h1 class="animated fadeIn fast">Buscando "{{ termino }}" </h1>
+<hr>
+<p *ngIf="heroes.length == 0 " class="animated fadeIn fast w-100 alert alert-danger">
+    Lo sentimos, no se encontró ningún héroe parecido al que busca
+</p>
+<div class="card-columns">
+
+    <!-- <div class="card animated fadeIn " *ngFor=" let heroe of heroes; let i = index; ">
+        src="../../../{{ heroe.img }}"
+
+        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+        <div class="card-body">
+            <h5 class="card-title">{{ heroe.nombre }}</h5>
+            <p class="card-text">{{ heroe.bio }}</p>
+            <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+        </div>
+    </div> -->
+
+    <app-hero-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-hero-tarjeta>
+
+
+</div>
